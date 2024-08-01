@@ -1,17 +1,16 @@
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import Home from './components/Home'
+import UserProfile from './components/UserProfile';
+import OtherProfile from './components/OtherProfile';
+import Filter from './components/Filter';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Home/>
+    <View>
+      {/* <Home/> */}
+      {/* <UserProfile/> */}
+      {/* <OtherProfile/> */}
+      <Filter/>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container:{
-    paddingVertical: 50,
-    paddingHorizontal: 20
-  },
-});

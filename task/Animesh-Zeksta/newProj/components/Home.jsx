@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
 
   return (
-    <View>
+    <View style={styles.container}>
       <View>
         <Text style={styles.filter}>Filter</Text>
         <Text style={styles.header}>Daily Connections</Text>
@@ -34,7 +34,7 @@ const Home = () => {
             <Text style={styles.refreshButtonText}>Refresh</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView contentContainerStyle={styles.listContainer} showsVerticalScrollIndicator={false}>
         {connections.map((connection, index) => ( 
           <ProfileCard key={index} connection={connection} />
         ))}
@@ -44,6 +44,10 @@ const Home = () => {
 };
 
 const styles = StyleSheet.create({
+  container:{
+    paddingVertical: 50,
+    paddingHorizontal: 20
+  },
   filter:{
     textAlign: 'right',
     color: '#ce1694',
@@ -68,6 +72,9 @@ const styles = StyleSheet.create({
     color: '#ce1694',
     fontSize: 16,
     fontWeight: 'bold'
+  },
+  listContainer: {
+    paddingBottom: 200
   },
 });
 

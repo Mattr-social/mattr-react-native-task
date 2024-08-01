@@ -6,7 +6,7 @@ const ProfileCard = ({ connection }) => {
     <View style={styles.container}>
          <Image
              style={styles.image}
-             source={require("../assets/v3_0076770.jpg")}
+             source={require("../assets/pic.png")}
          />
          <View style={styles.details}>
              <Text style={styles.name}>{connection.first_name} {connection.last_name}, 23</Text>
@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   container:{
     alignSelf: 'center',
     borderRadius: 15,
-    marginBottom: 25
+    marginBottom: 25,
+    overflow: 'hidden'
   },
   image: {
     width: 300,
@@ -37,17 +38,6 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
     alignItems: 'center',
     position: 'relative',
-  },
-  topMatch: {
-    position: 'absolute',
-    top: 10,
-    right: 10,
-    backgroundColor: '#000',
-    color: '#fff',
-    borderRadius: 5,
-    paddingVertical: 2,
-    paddingHorizontal: 10,
-    fontSize: 12,
   },
   details: {
     backgroundColor: '#f8f9fe',
